@@ -1,13 +1,11 @@
-import { Spotlight } from "@/components/ui/Spotlight";
-import { FloatingNav } from "@/components/ui/FloatingNavBar";
-import { IconHome } from "@tabler/icons-react";
-import Hero from "@/components/Hero";
-import Grid from "@/components/Grid";
-import Projects from "@/components/Projects";
-import { navItems } from "@/data";
-import Testimonials from "@/components/Testimonials";
 import Experience from "@/components/Experience";
+import Grid from "@/components/Grid";
+import Hero from "@/components/Hero";
+import Projects from "@/components/Projects";
+import Testimonials from "@/components/Testimonials";
+import { FloatingNav } from "@/components/ui/FloatingNavBar";
 import Footer from "@/components/ui/Footer";
+import { navItems } from "@/data";
 
 const Home = () => {
   return (
