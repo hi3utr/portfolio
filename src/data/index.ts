@@ -73,7 +73,7 @@ export const projects = [
   {
     id: 1,
     title: "Beanfun!",
-    des: " Beanfun! allows users to connect with others who share their interests. There are features for chatting, exchanging items, and reading comics. The app also offers games, news, and a marketplace.",
+    des: "Beanfun! allows users to connect with others who share their interests, featuring chat, item exchange, comics, games, news, and a marketplace.",
     img: "/p1.png",
     iconLists: ["/vue.svg", "/scss.svg", "/ts.svg", "/nuxt.svg", "/pinia.svg"],
     link: "https://www.beanfun.com/",
@@ -81,7 +81,7 @@ export const projects = [
   {
     id: 2,
     title: "Savvycom careers",
-    des: "A recruit website for Savvycom. The company offers services including end-to-end software development, technology consulting, and cloud Devops.",
+    des: "A recruiting website for Savvycom. The company offers services including end-to-end software development, technology consulting, and Cloud Devops.",
     img: "/p2.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/redux.svg", "/tan.svg"],
     link: "https://careers.savvycom.vn/en",
@@ -97,7 +97,7 @@ export const projects = [
   {
     id: 4,
     title: "Sunday",
-    des: "An Thailand insurance technology company with a mission to not only personalize and simplify insurance, but also make it accessible to all people.",
+    des: "Thailand-based insurance technology company on a mission to personalize, simplify, and make insurance accessible to everyone",
     img: "/p4.png",
     iconLists: ["/re.svg", "/mui.svg", "/ts.svg", "/redux.svg", "/tan.svg"],
     link: "https://easysunday.com/en/",
@@ -147,70 +147,6 @@ export const testimonials = [
   },
 ];
 
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
-export const workExperience = [
-  {
-    id: 1,
-    title: "Frontend Engineer Intern",
-    desc: "Assisted in the development of a web-based platform using React.js, enhancing interactivity.",
-    className: "md:col-span-2",
-    thumbnail: "/exp1.svg",
-  },
-  {
-    id: 2,
-    title: "Mobile App Dev - JSM Tech",
-    desc: "Designed and developed mobile app for both iOS & Android platforms using React Native.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp2.svg",
-  },
-  {
-    id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
-  },
-  {
-    id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
-    className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
-  },
-];
-
 export const socialMedia = [
   {
     id: 1,
@@ -226,26 +162,26 @@ export const socialMedia = [
   },
 ];
 
-export const dummyContent = [
+export const experiences = [
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: "Test",
-    badge: "React",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Frontend Leader",
+    description:
+      "• Oversee the development and implementation of the user interface for web applications.\n• Guide and mentor a team of frontend developers.\n• Ensure the delivery of high-quality, responsive, and performant user experiences.\n• Set technical direction for frontend development.\n• Establish and enforce coding standards.\n• Coordinate with designers and backend developers.\n• Conduct code reviews to maintain code quality.\n• Manage project timelines and ensure timely delivery.\n• Stay updated with industry trends and advancements.\n• Implement best practices in frontend development.\n• Continuously improve the development workflow and tools.\n• Have working experience with foreign developers and customers(Thailand, USA, Taiwan, ...)",
+    badge: "Sotatek (03/2024 - Now)",
+    image: "/sotatek.png",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: "Test 1",
-    badge: "Changelog",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Frontend Developer",
+    description:
+      "• Develop and maintain user interfaces for web applications using ReactJS, VueJS, Next.js, ...\n• Write clean, efficient, and maintainable code.\n• Implement designs and ensure the technical feasibility of UI/UX designs.\n• Optimize applications for maximum speed and scalability.\n• Collaborate with backend developers to integrate APIs and other services.\n• Conduct thorough testing of applications, including unit testing and debugging.\n• Stay updated with the latest trends and best practices in frontend development.\n• Participate in code reviews to maintain high code quality and share knowledge with the team.\n• Troubleshoot and resolve issues in a timely manner.\n• Contribute to the improvement of the development workflow and tools.\n• Ensure cross-browser compatibility and responsiveness of applications.\n• Write and maintain documentation for frontend features and codebase.",
+    badge: "Savvycom (07/2022 - 02/2024)",
+    image: "/svc.png",
   },
   {
-    title: "Lorem Ipsum Dolor Sit Amet",
-    description: "Test 2",
-    badge: "Launch Week",
-    image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "Bachelor of Electronics and Telecommunications",
+    description:
+      "• GPA: 3.11\n• ATC 2021 Conference: Implementation of a WiFi-based V2V-V2I Communication Unit for Low Speed Vehicles\n• Published paper on IEEE Xplore: https://ieeexplore.ieee.org/document/9598224",
+    badge: "Hanoi University of Science and Technology (08/2017 - 11/2021)",
+    image: "/hust.png",
   },
 ];
