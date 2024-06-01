@@ -6,6 +6,7 @@ import Grid from "@/components/Grid";
 import Projects from "@/components/Projects";
 import { navItems } from "@/data";
 import Testimonials from "@/components/Testimonials";
+import Experience from "@/components/Experience";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Grid />
         <Projects />
         <Testimonials />
+        <Experience />
       </div>
     </div>
   );

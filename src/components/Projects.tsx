@@ -14,7 +14,7 @@ const Projects = () => {
         A small selection of{" "}
         <span className="text-purple">recent projects</span>
       </div>
-      <div className="grid md:grid-cols-2 md:grid-rows-2 gap-5 md:mt-12 mt-8">
+      <div className="grid md:grid-cols-2 md:grid-rows-2 md:gap-8 gap-4 md:mt-12 mt-8">
         {projects.map((item) => (
           <Card
             key={item.id}

@@ -26,7 +26,8 @@ const Hero = () => {
           words="Welcome to My Portfolio"
         />
         <div className="md:text-2xl text-base text-center">
-          Hi! I’m Wayne, a Web Developer based in Vietnam.
+          Hi! I’m Hieu, but you can call me Wayne.
+          <br />A Web Developer based in Vietnam.
         </div>
         <ShimmerButton
           title="Visit my works"

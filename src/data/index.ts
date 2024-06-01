@@ -72,35 +72,35 @@ export const gridItems = [
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "Beanfun!",
+    des: " Beanfun! allows users to connect with others who share their interests. There are features for chatting, exchanging items, and reading comics. The app also offers games, news, and a marketplace.",
+    img: "/p1.png",
+    iconLists: ["/vue.svg", "/scss.svg", "/ts.svg", "/nuxt.svg", "/pinia.svg"],
+    link: "https://www.beanfun.com/",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Savvycom careers",
+    des: "A recruit website for Savvycom. The company offers services including end-to-end software development, technology consulting, and cloud Devops.",
+    img: "/p2.png",
+    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/redux.svg", "/tan.svg"],
+    link: "https://careers.savvycom.vn/en",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "Drift Zone - NFT Game",
+    des: "Drift Zone is an NFT game that allows users to collect rare NFTs, engage in thrilling battles, and reap extraordinary rewards.",
+    img: "/p3.png",
+    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/radix.svg", "/tan.svg"],
+    link: "https://driftzone.io/en",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Sunday",
+    des: "An Thailand insurance technology company with a mission to not only personalize and simplify insurance, but also make it accessible to all people.",
+    img: "/p4.png",
+    iconLists: ["/re.svg", "/mui.svg", "/ts.svg", "/redux.svg", "/tan.svg"],
+    link: "https://easysunday.com/en/",
   },
 ];
 
@@ -223,5 +223,29 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
+  },
+];
+
+export const dummyContent = [
+  {
+    title: "Lorem Ipsum Dolor Sit Amet",
+    description: "Test",
+    badge: "React",
+    image:
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Lorem Ipsum Dolor Sit Amet",
+    description: "Test 1",
+    badge: "Changelog",
+    image:
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&q=80&w=3540&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    title: "Lorem Ipsum Dolor Sit Amet",
+    description: "Test 2",
+    badge: "Launch Week",
+    image:
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&q=80&w=3506&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
