@@ -107,33 +107,43 @@ export const projects = [
 export const testimonials = [
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
+    name: "Kaung Myat (Kraft) Hein",
+    title: "Senior Frontend Developer of Sirius Technologies",
+    avatar:
+      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
+    name: "Kaung Myat (Kraft) Hein",
+    title: "Senior Frontend Developer of Sirius Technologies",
+    avatar:
+      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
+    name: "Kaung Myat (Kraft) Hein",
+    title: "Senior Frontend Developer of Sirius Technologies",
+    avatar:
+      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
+    name: "Kaung Myat (Kraft) Hein",
+    title: "Senior Frontend Developer of Sirius Technologies",
+    avatar:
+      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
+    name: "Kaung Myat (Kraft) Hein",
+    title: "Senior Frontend Developer of Sirius Technologies",
+    avatar:
+      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
   },
 ];
 
