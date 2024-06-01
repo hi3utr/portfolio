@@ -151,14 +151,17 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/hi3utr",
   },
   {
     id: 2,
-    img: "/twit.svg",
+    img: "/fb.svg",
+    link: "https://fb.com/hi3u.tr",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/hieu-tran-3266801a7/",
   },
 ];
 

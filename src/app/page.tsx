@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import { navItems } from "@/data";
 import Testimonials from "@/components/Testimonials";
 import Experience from "@/components/Experience";
+import Footer from "@/components/ui/Footer";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
         <Projects />
         <Testimonials />
         <Experience />
+        <Footer />
       </div>
     </div>
   );
