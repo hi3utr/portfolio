@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "@/utils/cn";
-import Image from "next/image";
 import React, {
   createContext,
   useState,
@@ -45,6 +44,24 @@ export const CardContainer = ({
     setIsMouseEntered(false);
     containerRef.current.style.transform = `rotateY(0deg) rotateX(0deg)`;
   };
+
+  const handleDeviceOrientation = (event: DeviceOrientationEvent) => {
+    if (!containerRef.current) return;
+    const { beta, gamma } = event;
+    if (beta && gamma) {
+      const x = gamma / 10;
+      const y = beta / 10;
+      containerRef.current.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("deviceorientation", handleDeviceOrientation);
+    return () => {
+      window.removeEventListener("deviceorientation", handleDeviceOrientation);
+    };
+  }, []);
+
   return (
     <MouseEnterContext.Provider value={[isMouseEntered, setIsMouseEntered]}>
       <div
