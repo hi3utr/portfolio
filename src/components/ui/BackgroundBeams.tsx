@@ -4,7 +4,29 @@ import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
 
 export const BackgroundBeams = React.memo(
-  ({ className }: { className?: string }) => {
+  ({
+    className,
+    lite,
+  }: {
+    className?: string;
+    /** Skips SVG + motion tweening (~40 paths) — much cheaper on weak GPUs. */
+    lite?: boolean;
+  }) => {
+    if (lite) {
+      return (
+        <div
+          className={cn(
+            "pointer-events-none absolute inset-0 h-full w-full overflow-hidden",
+            className,
+          )}
+          aria-hidden
+        >
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_90%_60%_at_50%_0%,rgba(99,102,241,0.18),transparent_58%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom,rgba(24,167,237,0.08),transparent_55%)]" />
+        </div>
+      );
+    }
+
     const paths = [
       "M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875",
       "M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867",

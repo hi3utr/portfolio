@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./theme-provider";
+import { MotionBudgetProvider } from "@/components/providers/MotionBudgetProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <MotionBudgetProvider>{children}</MotionBudgetProvider>
         </ThemeProvider>
       </body>
     </html>

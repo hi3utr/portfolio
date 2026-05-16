@@ -56,11 +56,27 @@ export type GlobeConfig = {
 interface WorldProps {
   globeConfig: GlobeConfig;
   data: Position[];
+  /** Freeze WebGL loop (e.g. off-screen). */
+  paused?: boolean;
+  /** Lower DPR / density / arcs for weaker devices. */
+  performanceMode?: boolean;
 }
 
 let numbersOfRings = [0];
 
-export function Globe({ globeConfig, data }: WorldProps) {
+function DprLimiter({ max }: { max: number }) {
+  const { gl, size } = useThree();
+
+  useEffect(() => {
+    gl.setPixelRatio(Math.min(window.devicePixelRatio ?? 1, max));
+    gl.setSize(size.width, size.height);
+    gl.setClearColor(0xffaaff, 0);
+  }, [gl, size, max]);
+
+  return null;
+}
+
+export function Globe({ globeConfig, data, performanceMode = false }: WorldProps) {
   const [globeData, setGlobeData] = useState<
     | {
         size: number;
@@ -152,7 +168,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
     if (globeRef.current && globeData) {
       globeRef.current
         .hexPolygonsData(countries.features)
-        .hexPolygonResolution(3)
+        .hexPolygonResolution(performanceMode ? 2 : 3)
         .hexPolygonMargin(0.7)
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
@@ -162,7 +178,7 @@ export function Globe({ globeConfig, data }: WorldProps) {
         });
       startAnimation();
     }
-  }, [globeData]);
+  }, [globeData, performanceMode]);
 
   const startAnimation = () => {
     if (!globeRef.current || !globeData) return;
@@ -183,7 +199,9 @@ export function Globe({ globeConfig, data }: WorldProps) {
       .arcDashLength(defaultProps.arcLength)
       .arcDashInitialGap((e) => (e as { order: number }).order * 1)
       .arcDashGap(15)
-      .arcDashAnimateTime((e) => defaultProps.arcTime);
+      .arcDashAnimateTime(() =>
+        performanceMode ? defaultProps.arcTime * 1.8 : defaultProps.arcTime,
+      );
 
     globeRef.current
       .pointsData(data)
@@ -205,23 +223,24 @@ export function Globe({ globeConfig, data }: WorldProps) {
   useEffect(() => {
     if (!globeRef.current || !globeData) return;
 
+    const intervalMs = performanceMode ? 5000 : 2000;
+    const ringSample = performanceMode
+      ? Math.floor((data.length * 1) / 2)
+      : Math.floor((data.length * 4) / 5);
+
     const interval = setInterval(() => {
       if (!globeRef.current || !globeData) return;
-      numbersOfRings = genRandomNumbers(
-        0,
-        data.length,
-        Math.floor((data.length * 4) / 5)
-      );
+      numbersOfRings = genRandomNumbers(0, data.length, ringSample);
 
       globeRef.current.ringsData(
-        globeData.filter((d, i) => numbersOfRings.includes(i))
+        globeData.filter((d, i) => numbersOfRings.includes(i)),
       );
-    }, 2000);
+    }, intervalMs);
 
     return () => {
       clearInterval(interval);
     };
-  }, [globeRef.current, globeData]);
+  }, [globeData, performanceMode, data.length]);
 
   return (
     <>
@@ -230,25 +249,20 @@ export function Globe({ globeConfig, data }: WorldProps) {
   );
 }
 
-export function WebGLRendererConfig() {
-  const { gl, size } = useThree();
-
-  useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
-    gl.setSize(size.width, size.height);
-    gl.setClearColor(0xffaaff, 0);
-  }, []);
-
-  return null;
-}
-
 export function World(props: WorldProps) {
-  const { globeConfig } = props;
+  const { globeConfig, paused = false, performanceMode = false } = props;
   const scene = new Scene();
   scene.fog = new Fog(0xffffff, 400, 2000);
+  const maxDpr = performanceMode ? 1 : 2;
+  const orbitOn = !paused && !performanceMode;
+
   return (
-    <Canvas scene={scene} camera={new PerspectiveCamera(50, aspect, 180, 1800)}>
-      <WebGLRendererConfig />
+    <Canvas
+      scene={scene}
+      camera={new PerspectiveCamera(50, aspect, 180, 1800)}
+      frameloop={paused ? "never" : "always"}
+    >
+      <DprLimiter max={maxDpr} />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
       <directionalLight
         color={globeConfig.directionalLeftLight}
@@ -269,8 +283,8 @@ export function World(props: WorldProps) {
         enableZoom={false}
         minDistance={cameraZ}
         maxDistance={cameraZ}
-        autoRotateSpeed={1}
-        autoRotate={true}
+        autoRotateSpeed={performanceMode ? 0.45 : 1}
+        autoRotate={orbitOn}
         minPolarAngle={Math.PI / 3.5}
         maxPolarAngle={Math.PI - Math.PI / 3}
       />
