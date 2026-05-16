@@ -12,10 +12,12 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
+    id: string;
     quote: string;
     name: string;
     title: string;
     avatar?: string;
+    recommenderLinkedInUrl?: string;
   }[];
   direction?: "left" | "right";
   speed?: "fast" | "normal" | "slow";
@@ -87,14 +89,14 @@ export const InfiniteMovingCards = ({
           pauseOnHover && "hover:[animation-play-state:paused]"
         )}
       >
-        {items.map((item, idx) => (
+        {items.map((item) => (
           <li
             className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-8 py-6 md:w-[600px]"
             style={{
               background:
                 "linear-gradient(103.4deg, #04071D 16.66%, #0C0E23 81.61%)",
             }}
-            key={item.name}
+            key={item.id}
           >
             <blockquote>
               <div
@@ -107,15 +109,26 @@ export const InfiniteMovingCards = ({
               <div className="relative z-20 mt-6 flex flex-row items-center gap-3">
                 <div className="rounded-full overflow-hidden">
                   <Image
-                    src={item.avatar ?? ""}
-                    alt=""
+                    src={item.avatar ?? "/profile.svg"}
+                    alt={item.name ? `Photo of ${item.name}` : ""}
                     width={50}
                     height={50}
                   />
                 </div>
                 <span className="flex flex-col gap-1">
                   <span className=" text-base md:text-lg font-semibold text-white">
-                    {item.name}
+                    {item.recommenderLinkedInUrl ? (
+                      <a
+                        href={item.recommenderLinkedInUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-purple underline-offset-2 hover:underline"
+                      >
+                        {item.name}
+                      </a>
+                    ) : (
+                      item.name
+                    )}
                   </span>
                   <span className=" text-xs md:text-sm text-gray-400 font-normal">
                     {item.title}

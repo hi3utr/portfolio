@@ -8,7 +8,7 @@ export const navItems = [
 export const gridItems = [
   {
     id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
+    title: "I prioritize client collaboration, fostering open communication",
     description: "",
     className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
@@ -69,6 +69,21 @@ export const gridItems = [
   },
 ];
 
+/** Testimonials synced from LinkedIn “Recommendations received” on your profile. Add entries as new recommendations appear. */
+export type LinkedInTestimonial = {
+  id: string;
+  quote: string;
+  name: string;
+  title: string;
+  avatar?: string;
+  /** Recommender’s LinkedIn profile (from the recommendation byline). */
+  recommenderLinkedInUrl?: string;
+};
+
+/** Open your full recommendations list on LinkedIn. */
+export const linkedInRecommendationsUrl =
+  "https://www.linkedin.com/in/hieu-tran-3266801a7/details/recommendations/";
+
 export const projects = [
   {
     id: 1,
@@ -104,46 +119,17 @@ export const projects = [
   },
 ];
 
-export const testimonials = [
+export const testimonials: LinkedInTestimonial[] = [
   {
+    id: "kaung-myat-hein",
     quote:
       "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
-    name: "Kaung Myat (Kraft) Hein",
-    title: "Senior Frontend Developer of Sirius Technologies",
+    name: "Kaung Myat H.",
+    title: "Senior Frontend Developer, Sirius Technologies",
     avatar:
-      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
-  },
-  {
-    quote:
-      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
-    name: "Kaung Myat (Kraft) Hein",
-    title: "Senior Frontend Developer of Sirius Technologies",
-    avatar:
-      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
-  },
-  {
-    quote:
-      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
-    name: "Kaung Myat (Kraft) Hein",
-    title: "Senior Frontend Developer of Sirius Technologies",
-    avatar:
-      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
-  },
-  {
-    quote:
-      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
-    name: "Kaung Myat (Kraft) Hein",
-    title: "Senior Frontend Developer of Sirius Technologies",
-    avatar:
-      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
-  },
-  {
-    quote:
-      "Hieu Tran is a hardworking, adaptable individual with a strong technical skillset. He consistently completes tasks on schedule and approaches new concepts with an open mind. I'd recommend him without hesitation.",
-    name: "Kaung Myat (Kraft) Hein",
-    title: "Senior Frontend Developer of Sirius Technologies",
-    avatar:
-      "https://media.licdn.com/dms/image/C5603AQExVcROV2-X4g/profile-displayphoto-shrink_800_800/0/1652109701621?e=1722470400&v=beta&t=PR2bC2ZNxpuKovknF7nUgNLbMqpZtp605KjVY_hHJ6Y",
+      "https://media.licdn.com/dms/image/v2/D5603AQE10ENkyI84dw/profile-displayphoto-shrink_100_100/B56ZUK68wCGQAY-/0/1739644982156?e=1780531200&v=beta&t=spc1r7jzb7rKx_lMpgY--ml5_2xMTwnWkAGexdgdlf4",
+    recommenderLinkedInUrl:
+      "https://www.linkedin.com/in/kaung-myat-h-96bba715b",
   },
 ];
 
@@ -170,14 +156,14 @@ export const experiences = [
     title: "Frontend Leader",
     description:
       "• Oversee the development and implementation of the user interface for web applications.\n• Guide and mentor a team of frontend developers.\n• Ensure the delivery of high-quality, responsive, and performant user experiences.\n• Set technical direction for frontend development.\n• Establish and enforce coding standards.\n• Coordinate with designers and backend developers.\n• Conduct code reviews to maintain code quality.\n• Manage project timelines and ensure timely delivery.\n• Stay updated with industry trends and advancements.\n• Implement best practices in frontend development.\n• Continuously improve the development workflow and tools.\n• Have working experience with foreign developers and customers(Thailand, USA, Taiwan, ...)",
-    badge: "Sotatek (03/2024 - Now)",
+    badge: "Sotatek (03/2022 - Now)",
     image: "/sotatek.png",
   },
   {
     title: "Frontend Developer",
     description:
       "• Develop and maintain user interfaces for web applications using ReactJS, VueJS, Next.js, ...\n• Write clean, efficient, and maintainable code.\n• Implement designs and ensure the technical feasibility of UI/UX designs.\n• Optimize applications for maximum speed and scalability.\n• Collaborate with backend developers to integrate APIs and other services.\n• Conduct thorough testing of applications, including unit testing and debugging.\n• Stay updated with the latest trends and best practices in frontend development.\n• Participate in code reviews to maintain high code quality and share knowledge with the team.\n• Troubleshoot and resolve issues in a timely manner.\n• Contribute to the improvement of the development workflow and tools.\n• Ensure cross-browser compatibility and responsiveness of applications.\n• Write and maintain documentation for frontend features and codebase.",
-    badge: "Savvycom (07/2022 - 02/2024)",
+    badge: "Savvycom (07/2020 - 07/2022)",
     image: "/svc.png",
   },
   {
